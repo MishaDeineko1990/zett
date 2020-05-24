@@ -1,0 +1,624 @@
+	/*  1) "#tcChat_" is prepended for Client Body skin, 
+    2) "#" is prepended for Persistent skin
+    ---------------------------------------------------------*/
+
+/* START GLOBAL STYLING 
+------------------------*/
+body {
+  margin: 0;
+}
+
+.tcChat {
+	font-size: 10px;
+}
+
+#tcChat_Skin.tcChat, 
+iframe#inqChatStage  {
+  border-radius: 10px;
+  box-shadow: 0 0 12px 0 rgba(0,0,0,.12), 0 4px 12px 0 rgba(12,18,28,.12);
+} 
+
+#tcChat_background,
+#background {
+	 background-color: #f4f4f4;
+} 
+
+#tcChat_chatWindow,
+#chatWindow {
+  background-color: transparent !important;
+}
+
+.tcChat *,
+#tcChat * {
+  box-sizing: initial;
+  -webkit-box-sizing: initial;
+  border: 0px solid transparent !important;
+
+}
+/* END GLOBAL STYLING
+------------------------*/
+
+/* START TITLE BAR STYLING
+---------------------------*/
+#tcChat_titleBar,
+#titleBar {
+  background-color: #333333; 
+}
+
+#tcChat_ChatskinLogo,
+#ChatskinLogo { 
+  color:    #ffffff;
+  font-family: "Arial", sans-serif; 
+  font-size: 16px;
+  line-height: 1.6em;
+  font-weight: normal; 	
+}
+
+#tcChat_ChatskinSlogan,
+#ChatskinSlogan { 
+  color:    #9a9a9a;
+  font-family: "Arial", sans-serif; 
+  font-size: 12px;
+  line-height: 1.6em;
+  font-weight: normal;
+  top: 65px;
+  left: 24px;
+  width: 152px;
+  height: 36px;
+}
+
+#tcChat_brandingBar,
+#brandingBar { 
+  position: absolute !important;
+  bottom: 0px !important; 
+  display: block !important; 
+  height: 8px !important;
+  width: 100% !important;
+}
+
+#tcChat_brandingBar img,
+#brandingBar img {  
+  display: block !important; 
+  width: 100% !important;
+}
+
+#tcChat_btnMinimize,
+#btnMinimize,
+#tcChat_btnCloseChat,
+#btnCloseChat {
+  background-color: #333; 
+  border-radius: 0px; 
+  transition: box-shadow ease .3s;
+}
+
+#tcChat_btnMinimize:hover,
+#btnMinimize:hover,
+#tcChat_btnCloseChat:hover,
+#btnCloseChat:hover { 
+}
+
+#tcChat_btnMinimize:active,
+#btnMinimize:active,
+#tcChat_btnCloseChat:active,
+#btnCloseChat:active { 
+}  
+
+#tcChat_btnMinimize_img:focus,
+#btnMinimize_img:focus,
+#tcChat_btnCloseChat_img:focus,
+#btnCloseChat_img:focus {
+ outline: 1px dotted #5E9ED6;
+ outline: 5px auto -webkit-focus-ring-color;
+ outline-offset: 0px !important;
+}
+
+/*------navBar Styling------*/
+#tcChat_navBar,
+#navBar  { 
+ /* border-top: 1px solid #272525 !important; */
+}
+
+#tcChat_btnEmailActivate,
+#tcChat_btnFontSize,
+#tcChat_btnPrint,
+#tcChat_btnChime,
+#btnEmailActivate,
+#btnFontSize,
+#btnPrint,
+#btnChime {
+
+}
+
+#tcChat_btnEmailActivate:hover,
+#tcChat_btnFontSize:hover,
+#tcChat_btnPrint:hover,
+#tcChat_btnChime:hover,
+#btnEmailActivate:hover,
+#btnFontSize:hover,
+#btnPrint:hover,
+#btnChime:hover { 
+}
+
+#tcChat_btnEmailActivate:active,
+#tcChat_btnFontSize:active,
+#tcChat_btnPrint:active,
+#tcChat_btnChime:active,
+#btnEmailActivate:active,
+#btnFontSize:active,
+#btnPrint:active,
+#btnChime:active { 
+
+}  
+/* navBar Styling END */
+/* END TITLE BAR STYLING
+---------------------------*/
+
+/* START CHAT WINDOW STYLING
+---------------------------*/
+#tcChat_chatWindow {
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
+
+#tc_chat_boxchatWindow {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding-bottom: 15px;  /* Gives room for systemMsg span */
+}
+
+.tcChat .agentId,
+span.agentId {
+  color:    #fafafa;
+  font-family: "Arial", sans-serif; 
+  font-size: 14px;
+  line-height: 1.6em;
+  font-weight: bold; }
+
+.tcChat .agentMsg,
+span.agentMsg {
+  color:    #fafafa;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  word-wrap: break-word; 
+  line-height: 1.6em;
+}
+
+.tcChat .customerId, 
+span.customerId {
+  color:    #333333;
+  font-family: "Arial", sans-serif; 
+  font-size: 14px; 
+  line-height: 1.6em;
+  font-weight: bold; }
+
+.tcChat .customerMsg,
+span.customerMsg {
+  color:    #333333;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  word-wrap: break-word;
+  line-height: 1.6em; 
+}
+
+.tcChat .systemMsg,
+span.systemMsg {
+  color:    #272525;
+  font-family: "Arial", sans-serif;
+  font-size: small;
+  font-style: italic;
+  font-weight: normal;
+  text-align: left; 
+  display: block; 
+  position: relative;
+  left: 10px;
+}
+
+.tcChat .systemStatMsg,
+span.systemStatMsg {
+  color:    #272525;
+  font-family: "Arial", sans-serif;
+  font-size: small; 
+  font-style: italic;    
+  padding: 10pt;
+  position: relative;
+  top: 0px;
+  left: 10px;
+  display: block;
+  border-radius: 5px;
+  text-align:left;
+  margin-right: 45px !important;
+  margin-left: 0px !important;
+  word-break: break-word; 
+  line-height: 1.34em;	
+  font-weight: bold; } 
+
+#tcChat_chatWindow_span td,
+#chatWindow_span td {
+  margin-top: 12px !important;
+  margin-bottom: 6px !important;
+  text-align: left;
+}
+
+#tcChat_chatWindow_span tr,
+#chatWindow_span tr {
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  -moz-display: flex !important;
+  -moz-flex-flow: column wrap;
+  -moz-justify-content: flex-start;
+  -moz-align-items: flex-start;
+}
+
+#tcChat_chatWindow_span table,
+#chatWindow_span 
+{
+  width: 105%;
+  margin: 0 auto;
+}
+
+/* Variant : Agent Chat Bubble
+------------------------------------------ */
+/* creates the chat bubble */
+td.tcChat_agentLine {
+  background: none repeat scroll 0 0 #333333; 
+  padding: 16pt;
+  position: relative;
+  left: 16px;
+  display: block;
+ /* border: 1px solid #272525 !important; */
+  border-radius: 12px;
+  text-align:left;
+  margin-right: 100px !important;
+  margin-left: 0px !important;
+  word-break: break-word; 
+}  
+
+/* creates the background avatar on right side*/
+td.tcChat_agentLine:before {
+	display: block;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  content:"";
+  position: absolute;
+  top: 50%; 
+  margin-top: -4px;
+  left: -12px; /* controls horizontal position */ 
+  background-color: #333;
+  transform: rotate(45deg) translateY(-50%);
+  -moz-transform: rotate(45deg) translateY(-50%);
+  -webkit-transform: rotate(45deg) translateY(-50%);
+  z-index: -1;
+} 
+
+/* Variant : Customer Chat Bubble
+------------------------------------------ */
+/* creates the chat bubble */
+td.tcChat_customerLine { 
+  background: none repeat scroll 0 0 #ffffff; 
+  padding: 16pt;
+  position: relative;
+  right: 35px;
+  display: block;
+  border-radius: 12px;
+  text-align: left;
+  margin-left: 100px !important;
+  margin-right: 0px !important;
+  align-self: flex-end;
+  box-sizing: border-box;
+  word-break: break-word; 
+}  
+
+td.tcChat_customerLine:before {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  content:"";
+  position: absolute;
+  top: 50%; 
+  margin-top: -4px;
+  right: 16px; /* controls horizontal position */ 
+  background-color: #fff;
+  transform: rotate(45deg) translateY(-50%);
+  -moz-transform: rotate(45deg) translateY(-50%);
+  -webkit-transform: rotate(45deg) translateY(-50%);
+  z-index: -1;
+}
+
+/* The below targets the IE media query only
+----------------------------------------------- */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+  td.tcChat_customerLine {
+    max-width: 275px;
+  }
+
+  td.tcChat_agentLine {
+    max-width: 275px;
+  }
+
+} 
+
+#tcChat_ClickPersistent table,
+#ClickPersistent table {
+  background-color: #272525 !important;  
+  cursor: pointer; 
+  font-family: "Arial", sans-serif; 
+  text-transform: uppercase !important;
+  font-size: small;     
+  color: #ffffff;
+  text-align: center !important; 
+}
+/* END CHAT WINDOW STYLING
+---------------------------*/
+
+
+/* START CHATFOOTER STYLING
+---------------------------*/
+#tcChat_chatFooter,
+#chatFooter {
+  background-color: #ffffff;
+/*  border-top: 1px solid #272525 !important; */
+} 
+
+#tcChat_txtInput_bg,
+#txtInput_bg { 
+  background-color: transparent;  
+}
+
+#tcChat_txtInput_input,
+#txtInput_input {
+ box-sizing: initial;
+ -webkit-box-sizing: initial; 
+ border: none;
+ overflow: hidden;
+ resize: none;   
+ background-color: transparent;
+ font-family: "Arial", sans-serif;
+ font-size: small; 
+ color: #242424;
+ padding: 2px;
+ width: 96% !important; 
+ height: 30px !important;
+}
+
+#tcChat_txtInput_input:focus,
+#txtInput_input:focus {
+ outline: none;
+}
+
+#tcChat_btnSend,
+#btnSend { 
+    background-color: transparent; 
+
+    cursor: pointer;   
+    border: 0px solid transparent; 
+}    
+#btnSend_span,
+#tcChat_btnSend_span{
+color: #0f7cb8;
+font-size: 14px;
+text-align: center;
+font-family: Arial, sans-serif;
+}
+
+
+#tcChat_btnSend:hover,
+#btnSend:hover { 
+}
+
+#tcChat_btnSend:active,
+#btnSend:active {  
+}
+
+#inqDivResizeCorner,
+.inqDivResizeCorner {
+  outline: none !important;
+}
+/* END CHATFOOTER STYLING
+---------------------------*/
+
+/* START EMAIL PANE STYLING
+---------------------------*/ 
+#tcChat_email, 
+#email {
+  background-color: transparent;
+}
+
+#tcChat_enterEmailTitle, 
+#enterEmailTitle { 
+  font-family: "Arial", sans-serif; 
+  text-transform: uppercase !important;
+  font-size: 18px; 
+  color: #272525;
+	
+  font-weight: normal;
+}
+
+#tcChat_enterEmail, 
+#enterEmail {
+ font-family: "Arial", sans-serif; 
+/*  text-transform: uppercase !important; */
+  font-size: 14px;
+  font-weight: normal;
+  color: #666666;
+}
+
+#tcChat_emailLabel, 
+#emailLabel {
+ font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #272525;
+}
+
+#tcChat_emailReq,
+#emailReq {
+ font-family: "Arial", sans-serif;
+  font-size: 14px; 
+  font-style: normal;
+  color: #969696;  
+}
+
+#tcChat_emailInput_bg,
+#emailInput_bg
+{ 
+  border: 1px solid #e1e3e4 !important;
+  background-color: #ffffff;
+ font-family: "Arial", sans-serif;
+  padding: 4px;
+  margin: 0px 0px 0px 0px;
+  overflow: hidden;
+  resize: none;
+  outline: none;
+}
+
+#tcChat_emailInput_bg input:invalid,
+#emailInput_bg input:invalid
+{
+  border: 1px solid #ED1C25;
+}
+
+#tcChat_emailInput_input,
+#emailInput_input
+{
+ font-family: "Arial", sans-serif;
+  font-size: small;
+  font-weight: normal;
+  color: #333333;
+  padding: 10px 0px 0px 12px;
+  margin: 0px 0px 0px 0px;
+  border: none;
+  overflow: hidden;
+  resize: none;
+  outline: none;
+}
+
+#tcChat_emailInput_input:focus,
+#emailInput_input:focus {
+ outline: 1px dotted #272525;
+ outline: 5px auto -webkit-focus-ring-color;
+}
+
+#tcChat_btnSendEmail,
+#btnSendEmail { 
+
+}  
+
+#tcChat_btnBackToChat,
+#btnBackToChat {
+}  
+
+#tcChat_btnSendEmail:hover,
+#btnSendEmail:hover,
+#tcChat_btnBackToChat:hover,
+#btnBackToChat:hover { 
+}
+
+#tcChat_btnSendEmail:active,
+#btnSendEmail:active,
+#tcChat_btnBackToChat:active,
+#btnBackToChat:active {   
+}    
+
+#tcChat_btnSendEmail_span,
+#btnSendEmail_span {
+}  
+
+#tcChat_btnBackToChat_span,
+#btnBackToChat_span {
+} 
+
+#tcChat_SuccessSend,
+#SuccessSend {
+ font-family: "Arial", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #272525;
+}  
+
+#tcChat_emailInvalid,
+#emailInvalid { 
+ font-family: "Arial", sans-serif;
+  font-size: 12px; 
+  font-weight: bold;
+  color: #ED1C25;   
+} 
+
+#tcChat_emailInlineErrorBorder,
+#emailInlineErrorBorder { 
+  
+}
+
+#tcChat_emailInvalid_span,
+#emailInvalid_span {
+ font-family: "Arial", sans-serif;
+  font-size: 12px;
+  color: #ED1C25;
+}
+/* END EMAIL PANE STYLING
+---------------------------*/
+
+/* START MINIMIZED STATE STYLING
+---------------------------------*/
+#tcChat_Minimized {   
+  transition: all ease .3s;
+	width: 60px;
+	height: 60px;
+}    
+
+#tcChat_Minimized:hover,
+#tcChat_Minimized:focus { 
+}
+
+#tcChat_agentMsgCounter {
+ font-family: "Arial", sans-serif;	
+  font-size: 9pt;
+  color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  pointer-events: none;
+  background: #f2463c;
+  border-radius: 50%;
+  padding: 1px;
+  width: 16px;
+  height: 16px;  
+} 
+
+#tcChat_btnRestore_img,
+#btnRestore_img {
+  border: none !important;
+} 
+/* END MINIMIZE STATE STYLING
+-------------------------------*/
+
+/* START THANK YOU MESSAGE STYLING
+-----------------------------------*/
+#tcChat_thankYou,
+#thankYou { 
+  background-color: white !important; 
+}
+
+#tcChat_btnThankYou_span,
+#btnThankYou_span { 
+  font-family: "Arial", sans-serif;
+  text-transform: uppercase !important;
+  font-size: 18px;
+  color: #272525;
+}
+/* END THANK YOU MESSAGE STYLING
+---------------------------------*/
+
+table {
+	background-color: transparent !important; 
+}
+
+button.blank {
+	background: none !important;
+	border: none !important;
+}
